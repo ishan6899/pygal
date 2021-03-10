@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .w3-animate-bottom {
+            position: relative;
+            animation: animatebottom 1s
+        }
+        @keyframes animatebottom {
+            from {
+                bottom: -300px;
+                opacity: 0
+            }
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+    </style>
+    {% include 'index2.html'%}
+    <div class="w3-animate-bottom">
+        <center>
+            <h1>{{company_name}}</h1>
+            <div style = "width: 90%">
+                <div class = "row" >
+                {% for k,v in t.items() %}
+                    <span class = "card mb-3" style = "width: 13rem; margin: 10px; background-color: rgb(204, 208, 219);">
+                        <div class = "card-header" style = "font-size: small;">
+                            {{k}}
+                        </div>
+                        <div class = "card-body">
+                            <h6 class = "card-text">{{v}}</h6>
+                        </div>
+                    </span> &nbsp;&nbsp;&nbsp;
+                {% endfor %}
+                </div>
+            </div>
+        </center>
+        {% for k in graphs %}
+            <embed type = "image/svg+xml" src = {{k}} style = "max-width: 800px"/>
+        {% endfor %}
+    </div>
+
+    
+</body>
+</html>

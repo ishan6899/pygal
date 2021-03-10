@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/plugins/bootstrap/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <form method = "POST" action = "{{ url_for('interpreted')}}" id="myForm" style="margin: 20px;">
+        Enter Ticker
+        <input type = "text" name = "company" id = "company"><br>
+        <input type = "submit">
+    </form>
+    
+</body>
+</html>
