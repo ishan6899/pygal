@@ -13,3 +13,4 @@ sklearn
 yfinance
 pygal
 yahoo_fin
+gunicorn
